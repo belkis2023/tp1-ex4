@@ -1,0 +1,93 @@
+.clickable {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #F1E3D3;
+}
+
+body {
+    background-color: #FDAB9E;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: center;
+    align-content: center;
+
+}
+
+.container {
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr;
+
+}
+
+.grid-item {
+    
+    justify-items: stretch;
+    align-items: center;
+    align-content: center;
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+h1 {
+    color: #504B38;
+    font-family: Trebuchet MS;
+    grid-column: 2;
+    grid-row: 1;
+    transform: scale(2);  
+
+}
+
+@media (max-width: 400px) {
+    h1 {
+        transform: scale(1); 
+    }
+}
+
+.colorList {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+ul {
+    color: #504B38;
+    font-family: Trebuchet MS;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    width: auto; /* Allow dynamic width */
+    max-width: 400px; /* Prevent too much expansion */
+    transform: scale(2); 
+    
+}
+
+@media (max-width: 400px) {
+    ul {
+        transform: scale(1); /* Reduce size for smaller screens */
+    }
+}
+
+
+li { 
+    margin: 0.5rem 0; 
+    width: 170px;
+    height: 23px;
+    transition: transform 0.3s ease; 
+    transform-origin: center;
+    box-shadow: 4px 4px 10px #1B4D3E; /* Adds a subtle shadow */;
+
+}
+
+li:hover {
+    transform: scale(1.2);  /* Increases size by 20% on hover */
+}
